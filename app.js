@@ -15,13 +15,17 @@ formCharacter.forEach((el, index, node) => {
 
 		let patternCharacter = /^[a-z šđčćž]+$/gi;
 
-		console.log(e)
+		//console.log(e)
 
-		if(e.target.value.length >= 3 && e.target.value.match(patternCharacter)) {
-			console.log('Valid name length and character type');
+		if(e.target.value.length >= 2 && e.target.value.match(patternCharacter)) {
+			//console.log('Valid name length and character type');
+			let valid = 'message-success';
+			validateMessage('SUCCESS: Uspešno ste upisali vaše ime i prezime!', valid);
 			return true;
 		} else {
-			console.log('Invalid name length or character type');
+			//console.log('Invalid name length or character type');
+			let invalid = 'message-error';
+			validateMessage('ERROR: Niste dobro upisali vaše ime ili prezime!', invalid);
 			e.target.value = '';
 			return false;
 		}
@@ -38,13 +42,17 @@ formNumber.forEach((el, index, node) => {
 
 		let patternNumber = /^[0-9 -\/]+$/gi;
 
-		console.log(e)
+		//console.log(e)
 
 		if(e.target.value.length >= 10 && e.target.value.match(patternNumber)) {
-			console.log('Valid number length and type');
+			//console.log('Valid number length and type');
+			let valid = 'message-success';
+			validateMessage('SUCCESS: Uspešno ste upisali vaš broj telefona!', valid);
 			return true;
 		} else {
-			console.log('Invalid number length or character type');
+			//console.log('Invalid number length or character type');
+			let invalid = 'message-error';
+			validateMessage('ERROR: Niste dobro upisali vaš broj telefona!', invalid);
 			e.target.value = '';
 			return false;
 		}
@@ -54,6 +62,7 @@ formNumber.forEach((el, index, node) => {
 	})
 })
 
+//* validation 
 function validateCharacter(e) {
 	let patternCharacter = /^[a-z šđčćž]+$/gi;
     return patternCharacter.test(e.key);
@@ -72,5 +81,17 @@ function validateNumber(e) {
 function validateNumberMobile(e) {
     e.target.value = e.target.value.replace(/^[a-z šđčćž]+$/gi,'');
     return false;
+}
+
+function validateMessage(desc, status) {
+  	let node = doc.createElement("P");
+  	let textnode = doc.createTextNode(desc);
+  	node.className = status;
+  	node.appendChild(textnode);
+  	formMessage.appendChild(node);
+
+	setTimeout(() => {
+	  formMessage.removeChild(node);
+	}, 3000);
 }
 

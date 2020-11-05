@@ -1,0 +1,45 @@
+html {
+  	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  	box-sizing: inherit;
+}
+
+.form-message {
+	position: fixed;
+	right: 15px;
+	bottom: 5px;
+	left: 15px;
+	width: calc(100% - 30px);
+	max-width: 320px;	
+}
+
+
+
+.form-message .message-error,
+.form-message .message-success {
+	position: relative;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+	text-align: left;
+	margin: 0;
+	backdrop-filter: blur(12px);
+	margin-bottom: 10px;
+	border-radius: 3px;
+    font-family: sans-serif;
+    line-height: 1.15;	
+}
+
+.form-message .message-error {
+	border: 2px solid #d37f78;
+	background-color: rgba(211, 127, 120, 0.25);
+}
+
+.form-message .message-success {
+	border: 2px solid #9ddc86;
+	background-color: rgba(157, 220, 134, 0.25);
+}
