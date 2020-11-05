@@ -14,7 +14,8 @@
 				placeholder="Ime i Prezime" 
 				minlength="3"
 				required 
-				onkeypress="return validateCharacter(event)" />
+				onkeypress="return validateCharacter(event)"
+				onkeyup="validateCharacterMobile(event);" />
 
 		<input  class="form-number" 
 				name="phone" 
@@ -22,7 +23,8 @@
 				placeholder="Broj telefona" 
 				minlength="10"
 				required 
-				onkeypress="return validateNumber(event)" />
+				onkeypress="return validateNumber(event)"
+				onkeyup="validateNumberMobile(event);" />
 
 		<button class="submit__btn">Submit</button>
 	</form>
