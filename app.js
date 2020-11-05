@@ -70,7 +70,7 @@ function validateNumber(e) {
 }
 
 function validateNumberMobile(e) {
-    e.target.value = e.target.value.replace(/^[0-9 -\/]+$/gi,'');
+    e.target.value = e.target.value.replace(/^[a-z šđčćž]+$/gi,'');
     return false;
 }
 
