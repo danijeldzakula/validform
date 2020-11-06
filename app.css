@@ -59,7 +59,7 @@ body::after {
 
 .title {
 	text-align: center;
-	color: silver;
+	color: #f2f2f2;
 	margin: 0;
 	padding: 20px 15px 0;
 }
@@ -67,7 +67,7 @@ body::after {
 form {
 	margin: 50px 15px 0;
 	padding: 30px 15px;
-	border: 1px solid silver;
+	border: 1px solid #79907a;
 	border-radius: 3px;
 	backdrop-filter: blur(20px);
 }
@@ -83,7 +83,7 @@ input {
 	font-size: 14pt;
 	padding: 10px;
 	border: none;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid white;
 	background-color: transparent;
 	color: white;
 }
@@ -95,12 +95,12 @@ input:focus {
 label {
 	position: absolute;
 	top: 10px;
-	left: 5px;
-	color: #999;
+	left: 10px;
+	color: #dbdbdb;
 	font-size: 14pt;
 	font-weight: normal;
 	pointer-events: none;
-	transition: all 0.2s ease;
+	transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
 }
 
 input:focus ~ label,
@@ -164,7 +164,7 @@ input:focus ~ .bar:after {
 
 
 .submit-btn {
-	border: 1px solid silver;
+	border: 1px solid white;
 	background-color: transparent;
 	border-radius: 0;
 	margin: 0;
