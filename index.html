@@ -1,34 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="rs">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Validation Form - JavaScript</title>
 	<!-- Style -->
 	<link rel="stylesheet" href="./app.css">
 </head>
 <body>
 
+	<h1 class="title">Validation Form</h1>
+
 	<form action="./success.html" method>
-		<input 	class="form-character" 
-				name="name" 
-				type="text" 
-				placeholder="Ime i Prezime" 
-				minlength="2"
-				required 
-				onkeypress="return validateCharacter(event)"
-				onkeyup="return validateCharacterMobile(event)" />
+		<div class="form-group">
+			<input  class="form-character"
+					name="name" 
+					type="text" 
+					minlength="2"
+					onkeyup="return validateCharacterMobile(event)"
+					onkeypress="return validateCharacter(event)"
+					required />
 
-		<input  class="form-number" 
-				name="phone" 
-				type="tel" 
-				placeholder="Broj telefona" 
-				minlength="10"
-				required 
-				onkeypress="return validateNumber(event)"
-				onkeyup="return validateNumberMobile(event)" />
+			<span class="highlight"></span>
+			<span class="bar"></span>
 
-		<button class="submit__btn">Submit</button>
+			<label for="name">Ime i prezime</label>
+		</div>
+
+		<div class="form-group">
+			<input 	class="form-number"
+					name="phone" 
+					type="tel"
+					minlength="10"
+					onkeyup="return validateNumberMobile(event)"
+					onkeypress="return validateNumber(event)"
+					required />
+
+			<span class="highlight"></span>
+			<span class="bar"></span>
+
+			<label for="phone">Broj telefona</label>
+		</div>
+
+		<button class="submit-btn">Submit</button>
 	</form>
 
 
@@ -38,3 +52,25 @@
 
 </body>
 </html>
+
+
+<!--
+<input 	class="form-character" 
+	name="name" 
+	type="text" 
+	placeholder="Ime i Prezime" 
+	minlength="2"
+	required 
+	onkeyup="return validateCharacterMobile(event)"
+	onkeypress="return validateCharacter(event)" />
+-->
+<!-- 
+<input  class="form-number" 
+	name="phone" 
+	type="tel" 
+	placeholder="Broj telefona" 
+	minlength="10"
+	required 
+	onkeypress="return validateNumber(event)"
+	onkeyup="return validateNumberMobile(event)" />		
+-->
