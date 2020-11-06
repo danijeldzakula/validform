@@ -57,6 +57,22 @@ body::after {
   color: white;
 }
 
+::selection{
+  background: transparent;
+}
+
+::-moz-selection{
+  background: transparent;
+}
+
+input::selection {  
+	background: transparent; 
+}
+
+input:focus {
+  	background-color: transparent;
+}
+
 .title {
 	text-align: center;
 	color: #f2f2f2;
@@ -204,6 +220,7 @@ input:focus ~ .bar:after {
 	border-radius: 3px;
     font-family: sans-serif;
     line-height: 1.15;	
+    color: white;
 }
 
 .form-message .message-error {
@@ -214,4 +231,20 @@ input:focus ~ .bar:after {
 .form-message .message-success {
 	border: 2px solid #9ddc86;
 	background-color: rgba(157, 220, 134, 0.25);
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  /*border: 0;*/
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0;
+  transition: background-color 5000s ease-in-out 0s;
 }
