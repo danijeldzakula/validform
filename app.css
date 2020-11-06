@@ -85,6 +85,7 @@ input {
 	border: none;
 	border-bottom: 1px solid #ccc;
 	background-color: transparent;
+	color: white;
 }
 
 input:focus {
