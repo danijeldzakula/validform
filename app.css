@@ -43,6 +43,20 @@ body::after {
 	z-index: -1;
 }
 
+
+::placeholder { 
+  color: white;
+  opacity: 1; 
+}
+
+:-ms-input-placeholder { 
+  color: white;
+}
+
+::-ms-input-placeholder { 
+  color: white;
+}
+
 .title {
 	text-align: center;
 	color: silver;
